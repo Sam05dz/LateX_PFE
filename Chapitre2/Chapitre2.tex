@@ -1,0 +1,71 @@
+
+\chapter{JavaScript Charting For Dataviz}
+\section{Introduction}
+Data must Be analysed and visualized, to turn data into insights , So, here's the question: \textbf{how to pick the right tool?}\\
+
+In this chapter we're going to go through JavaScript frameworks and libraries that you can use to visualize our data. And I'd like to do a bit more than just list a few frameworks — I'm going to divide the list by the type of data or data visualization because "one size" doesn't fit all. There are different kinds of data, and each needs a specific visualization strategy.
+\begin{enumerate}
+    \item General-purpose charting libraries
+    \item Low-level and complex charting libraries
+    \item tables and data grids
+    \item Timeline charts and time-based tools
+    \item Geospatial and mapping tools
+    \item Word clouds
+    \item 3D visualization tools
+\end{enumerate}
+ 
+\section{General-purpose charting libraries}
+\subsection{ChartJs}
+The most popular open-source library \cite{rajvsp2019approach}for building responsive bar, pie, and line charts. I'd say this is the go-to library for most of the projects, as it fits most of the use cases.
+\subsection{Recharts}
+A composable charting library built on React components \\
+
+As per description, "It was built on top of SVG elements with a lightweight dependency on D3 submodules." It's a good choice for React-based projects, because you can use it natively as a component.
+\subsection{Highcharts}
+Highcharts is a JavaScript charting library based on SVG, with fallbacks to VML and canvas for old browsers.\\
+
+Highcharts is good for large companies whose products rely heavily on data visualization. You can see the code on GitHub, try and use it for non-commercial purposes. And then you can purchase Highcharts license just for Hightcharts or Highcharts plugin for Stocks, Maps, or Gantt if you'd like to use it for commercial purposes. We'll cover those later in this post as well.
+\subsection{Chartist.js}
+Chartist.js is the product of a community that was disappointed about the abilities provided by other charting libraries.\\
+
+This library is not as actively maintained as others, however, it still worths a mention because of its size with no dependencies. Less than a megabyte.\\
+
+Just like others, it uses SVGs, it's flexible and it has clear separation of concerns, i. e., CSS is in CSS and JS is in JS, which may not fit all projects, considering that a lot of projects are using CSS-in-JS approach, yet it still deserves our attention.
+\subsection{React-vis}
+A collection of React components to render common data visualization charts, such as line/area/bar charts, heat maps, scatterplots, contour plots, hexagon heatmaps, pie and donut charts, sunbursts, radar charts, parallel coordinates, and tree maps.\\
+
+This library is React-friendly, high-level and customisable, expressive and industry-strong, because it is backed by Uber, so chances are you'll get your answers in case you bump into an issue.
+\newpage
+\subsection{amCharts}
+A go-to library for data visualization. When you don't have time to learn new technologies.\\
+
+This is not as popular as the rest, however, it's actively maintained and claims to be easy to use. It could be a good choice if you'd like to combine it with other data viz library for geo and timeline data. I'll cover those in Geo and Timeline sections.\\
+
+Many other library may exist such as D3.js and Leaflet ,but in our project , we choose amCharts Library for our dataViz because it contain interactive timelines easy to manipulate. 
+
+\section{Using amCharts}
+amCharts have a wide selection of charts type, including geographical maps, and since it was designed to work with modern web dev toolkits like React, Angular, Vue, Ember, it will just fall into place, right out of the box.\\
+\subsection{X/Y}
+Line, Smoothed line, Area, Column / 3D column, Bar / 3D bar, Curved column, Cylinder, Cone, Scatter, Bubble, Candlestick, OHLC, Step (incl. w/ no-riser), Floating, Waterfall, Error, Stacked (regular, 100\% or 3D), Heatmap, GANTT, and any combination of these.
+\subsection{Sliced}
+Pie, 3D pie, Donut, Nested donut, Sunburst, Funnel, Pyramid, Pictorial.
+\subsection{Geo Maps}
+Map chart, Geo heat map, Map combined with charts. (Maps is an add-on and requires separate license)
+\subsection{Other}
+Sankey diagram, Treemap, Chord diagram, Radar, Polar.
+\newpage
+\section{The most advanced chart package}
+\subsection*{Classics with some new twists}
+XY charts are now so powerful and flexible, we can plot any data on them. Number, date, duration, or category axes are supported, in all directions.\\
+
+The axes can now contain interactive breaks, that expand on hover and actually look awesome.\\
+
+Pie charts are now fully nestable, with support for custom start and end angles, to create half circles.
+\subsubsection*{New geo maps}
+Maps now use GeoJSON format! Being open and widely accepted standard it opens up a lot of possibilities and sources for ready-made and custom maps.\\
+
+Furthermore, maps are now very flexible, with multi-series support, configurable down to the nut and bolt.
+\subsubsection*{Pictorials}
+We can create multi-layer, multi-series pictorial charts. Any SVG path can be used as a shape for our chart.
+
+and so Sankey Diagrams, Enhanced radar charts, Treemaps , Heatmaps ...etc. 

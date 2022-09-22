@@ -1,0 +1,72 @@
+\documentclass{report}
+
+%-------------[oneside,12pt]-----------------Zone 1-------------------------
+\usepackage{ebgaramond}
+\usepackage{graphicx}
+\usepackage{epigraph}
+\usepackage[utf8]{inputenc} % un package permet d'utiliser tous les caractères de votre clavier.
+\usepackage[T1]{fontenc} % un second package permettant d'utiliser tous les caractères de votre clavier.
+%\usepackage[francais]{babel} % un troisième package pour dire à <em>Latex</em> que vous écrivez en français.
+\usepackage{fancyhdr}
+
+
+
+%------------------------------Fin Zone 1---------------------------
+
+\begin{document}
+
+%------------------------------Zone 2: début des page non numérotées-------------------------
+
+\input{PageDeGarde/PageDeGarde.tex}
+\input{Remerciements/Remerciements.tex}
+\input{Dedicaces/Dedicaces.tex}
+\input{Resume/Resume.tex}
+\input{IntroductionGenerale/IntroductionGenerale.tex}
+
+%------------------------------Fin Zone 2: fin des page non numérotées---------------------------
+
+%------------------------------Zone 3:début entêtes et prieds de page-----------------------------------------
+
+\pagestyle{fancy}.
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[L]{\thesection}
+
+
+\fancyfoot[C]{\textbf{page \thepage}}
+\fancyfoot[R]{COVID-19 Data Visualisation}
+
+%------------------------------Fin Zone 3: fin des entêtes et prieds de page-------------------------------------------
+
+%-----------------Zone 4: début de la numérotation avec les chiffres romains-----------------
+
+\tableofcontents
+
+\pagenumbering{roman}%numérotation avec les chiffres romains
+\setcounter{page}{1} %début de la numérotation est 1.
+
+\listoftables
+\addcontentsline{toc}{chapter}{Liste des tableaux}
+\listoffigures
+\addcontentsline{toc}{chapter}{Table des figures}
+
+\input{ListeDesAbreviations/ListeDesAbreviations.tex} % rajoute la liste des abréviations.
+
+%-----------------Fin Zone 4: fin de la numérotation avec les chiffres romains-------------------
+
+%-----------------Zone 5: début de la numérotation avec les chiffres arabs-------------------
+
+%\input{IntroductionGenerale/IntroductionGenerale}
+
+\pagenumbering{arabic}% numérotation avec les chiffres arabe
+\setcounter{page}{1} % début de la numérotation est 1.
+
+\input{Chapitre1/Chapitre1}
+\input{Chapitre2/Chapitre2}
+\input{Chapitre3/Chapitre3}
+\input{ConclusionGenerale/ConclusionGenerale}
+%\input{Annexe/Annexe}
+\input{Bibliographie/Bibliographie}
+
+%-----------------Fin Zone 5: fin de la numérotation avec les chiffres arabs---------------------
+
+\end {document}
